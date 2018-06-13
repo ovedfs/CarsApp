@@ -37,7 +37,7 @@ namespace CarsApp
 
             await DisplayAlert("Login", "Tus datos son correctos", "OK");
 
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new MainPage(user));
         }
 
         async private void RegisterButton_Clicked(object sender, EventArgs e)
