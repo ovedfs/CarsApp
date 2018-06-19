@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarsApp.AddCarPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Entry x:Name="placasEntry" Placeholder="Placas..."/>
+            <Entry x:Name="marcaEntry" Placeholder="Marca..."/>
+            <Entry x:Name="modeloEntry" Placeholder="Modelo" Keyboard="Numeric"/>
+            <Entry x:Name="aliasEntry" Placeholder="Alias..."/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="fotoPicker" Text="Elige una foto..." Clicked="fotoPicker_Clicked"/>
+                <Image x:Name="foto" WidthRequest="80"/>
+            </StackLayout>
+            <Picker x:Name="estadosPicker" Title="Elige el estado"/>
+            <Picker x:Name="colorPicker" Title="Elige un color"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

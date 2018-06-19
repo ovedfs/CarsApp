@@ -5,6 +5,10 @@
              x:Class="CarsApp.MainPage"
              Title="Mis coches">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+ Coche" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
     <StackLayout Padding="20">
         <Label Text="{Binding Name}" FontSize="20"/>
 

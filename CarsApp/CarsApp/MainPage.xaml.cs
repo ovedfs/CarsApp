@@ -28,5 +28,10 @@ namespace CarsApp
 
             CarsListView.ItemsSource = cars;
         }
+
+        async private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddCarPage());
+        }
     }
 }
