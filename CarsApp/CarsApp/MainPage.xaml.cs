@@ -31,7 +31,7 @@ namespace CarsApp
 
         async private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddCarPage());
+            await Navigation.PushAsync(new AddCarPage(user));
         }
     }
 }
