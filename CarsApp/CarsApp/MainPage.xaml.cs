@@ -33,5 +33,11 @@ namespace CarsApp
         {
             await Navigation.PushAsync(new AddCarPage(user));
         }
+
+        async private void CarsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var car = e.SelectedItem as Car;
+            await Navigation.PushAsync(new CarPage(car));
+        }
     }
 }

@@ -11,7 +11,11 @@ namespace CarsApp
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new LoginPage())
+            {
+                //BackgroundColor = Color.OrangeRed
+                BarBackgroundColor = Color.OrangeRed
+            };
 		}
 
 		protected override void OnStart ()

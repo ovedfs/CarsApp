@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarsApp.CarDetailPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Image Source="{Binding Foto}"/>
+
+            <TableView>
+                <TableRoot>
+                    <TableSection Title="DATOS DEL COCHE">
+                        <TextCell Text="Placas" Detail="{Binding Placas}"/>
+                        <TextCell Text="Marca" Detail="{Binding Marca}"/>
+                        <TextCell Text="Modelo" Detail="{Binding Modelo}"/>
+                        <TextCell Text="Estado" Detail="{Binding Estado}"/>
+                        <TextCell Text="Color" Detail="{Binding Color}"/>
+                        <TextCell Text="Alias" Detail="{Binding Alias}"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

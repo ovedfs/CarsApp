@@ -8,8 +8,14 @@
 
             <Image Source="login.png" HorizontalOptions="Center" VerticalOptions="Center"/>
 
-            <Entry x:Name="entryEmail" Placeholder="Correo..." Keyboard="Email"/>
-            <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="True"/>
+            <Entry x:Name="entryEmail" 
+                   Placeholder="Correo..."
+                   Text="ovedfs@correo.com"
+                   Keyboard="Email"/>
+            <Entry x:Name="entryPassword" 
+                   Placeholder="Password"
+                   Text="123456"
+                   IsPassword="True"/>
             
             <StackLayout Margin="0,30" Orientation="Horizontal" HorizontalOptions="Center">
                 <Button x:Name="LoginButton" Text="Login" 

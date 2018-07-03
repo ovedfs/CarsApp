@@ -12,7 +12,7 @@
     <StackLayout Padding="20">
         <Label Text="{Binding Name}" FontSize="20"/>
 
-        <ListView x:Name="CarsListView">
+        <ListView x:Name="CarsListView" ItemSelected="CarsListView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ImageCell Text="{Binding Placas}" Detail="{Binding Marca}" ImageSource="{Binding Foto}"/>

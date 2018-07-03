@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarsApp.CarPage"
+            xmlns:Local="clr-namespace:CarsApp"
+            Title="{Binding Alias}"
+            BarBackgroundColor="#222222"
+            BarTextColor="White">
+
+    <Local:CarDetailPage Icon="detail2.png"/>
+
+    <ContentPage Icon="documents.png">
+        <Label Text="Estas en la página de Documentos..."/>
+    </ContentPage>
+
+    <ContentPage Icon="tickets.png">
+        <Label Text="Estas en la página de Multas..."/>
+    </ContentPage>
+
+    <ContentPage Icon="taxes.png">
+        <Label Text="Estas en la página de Tenencias..."/>
+    </ContentPage>
+
+    <ContentPage Icon="verify.png">
+        <Label Text="Estas en la página de Verificaciones..."/>
+    </ContentPage>
+
+    <ContentPage Icon="services.png">
+        <Label Text="Estas en la página de Servicios..."/>
+    </ContentPage>
+
+</TabbedPage>
