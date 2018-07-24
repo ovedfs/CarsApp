@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarsApp.AddFilePage"
+             Title="Nuevo documento">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Guardar" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="20">
+        <Entry x:Name="entryTitulo" Placeholder="Título..."/>
+        <Entry x:Name="entryDescripcion" Placeholder="Descripción..."/>
+        <Entry x:Name="entryNotas" Placeholder="Notas..."/>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="fotoPicker" Text="Elige una foto para el documento..." Clicked="fotoPicker_Clicked"/>
+            <Image x:Name="foto" WidthRequest="80"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

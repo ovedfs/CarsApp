@@ -9,9 +9,7 @@
 
     <Local:CarDetailPage Icon="detail2.png"/>
 
-    <ContentPage Icon="documents.png">
-        <Label Text="Estas en la página de Documentos..."/>
-    </ContentPage>
+    <Local:FilesPage Icon="documents.png"/>
 
     <ContentPage Icon="tickets.png">
         <Label Text="Estas en la página de Multas..."/>
