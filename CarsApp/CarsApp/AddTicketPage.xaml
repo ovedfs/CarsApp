@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarsApp.AddTicketPage"
+             Title="Nueva multa">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Guardar" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Fecha de la multa"/>
+            <DatePicker x:Name="PickerFechaMulta" MinimumDate="01/01/1980"/>
+
+            <Label Text="Monto de la multa"/>
+            <Entry x:Name="entryMonto" Placeholder="Monto..."/>
+
+            <Label Text="Pagada"/>
+            <Switch x:Name="switchPagada" IsToggled="False"/>
+
+            <Label Text="Fecha del pago"/>
+            <DatePicker x:Name="PickerFechaPago" MinimumDate="01/01/1980"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="fotoPicker" Text="Elige una foto de la multa..." Clicked="fotoPicker_Clicked"/>
+                <Image x:Name="foto" WidthRequest="80"/>
+            </StackLayout>
+
+            <Label Text="Observaciones"/>
+            <Entry x:Name="entryObservaciones"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -6,7 +6,7 @@
         <ScrollView>
             <StackLayout Padding="10">
                 <Image Source="{Binding Archivo}"/>
-                <Button x:Name="BtnClose" Clicked="BtnClose_Clicked"/>
+                <Button x:Name="BtnClose" Text="Cerrar" Clicked="BtnClose_Clicked"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
