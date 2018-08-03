@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarsApp.EditTicketPage"
+             Title="Editar multa">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Actualizar" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Label Text="Fecha de la multa"/>
+                <DatePicker x:Name="PickerFechaMulta" MinimumDate="01/01/1980" Format="dd/MMMM/yyyy" Date="{Binding FechaMulta}"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                <Label Text="Monto de la multa"/>
+                <Entry x:Name="entryMonto" Placeholder="Monto..." Text="{Binding Monto}"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout HorizontalOptions="StartAndExpand">
+                    <Label Text="Pagada"/>
+                    <Switch x:Name="switchPagada" IsToggled="{Binding Pagada}" HorizontalOptions="Start"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Label Text="Fecha del pago"/>
+                    <DatePicker x:Name="PickerFechaPago" MinimumDate="01/01/1980" Format="dd/MMMM/yyyy" Date="{Binding FechaPago}"/>
+                </StackLayout>
+            </StackLayout>
+
+            <Image x:Name="foto" WidthRequest="100" Source="{Binding Archivo}"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="fotoDetail" Text="Ampliar foto..." Clicked="fotoDetail_Clicked"/>
+                <Button x:Name="fotoPicker" Text="Cambiar foto..." Clicked="fotoPicker_Clicked"/>
+            </StackLayout>
+
+            <Label Text="Observaciones"/>
+            <Entry x:Name="entryObservaciones" Placeholder="Observaciones..." Text="{Binding Observaciones}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

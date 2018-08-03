@@ -28,9 +28,10 @@ namespace CarsApp
             TicketsListView.ItemsSource = tickets;
         }
 
-        private void TicketsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async private void TicketsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            var ticket = e.SelectedItem as Ticket;
+            await Navigation.PushAsync(new EditTicketPage(ticket));
         }
 
         async private void ToolbarItem_Clicked(object sender, EventArgs e)

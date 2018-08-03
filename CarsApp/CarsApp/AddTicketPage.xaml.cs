@@ -44,9 +44,36 @@ namespace CarsApp
             }
         }
 
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        async private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            // Validar formulario y registrar multa...
+            if (string.IsNullOrWhiteSpace(entryMonto.Text) || string.IsNullOrWhiteSpace(ImagePath))
+            {
+                await DisplayAlert("Error", "El monto y la foto de la multa son obligatorios", "Ok");
+                return;
+            }
+
+            Ticket ticket = new Ticket
+            {
+                FechaMulta = PickerFechaMulta.Date,
+                Monto = Convert.ToDouble(entryMonto.Text),
+                Pagada = switchPagada.IsToggled,
+                FechaPago = PickerFechaPago.Date,
+                Archivo = ImagePath,
+                Observaciones = entryObservaciones.Text,
+                CarId = (BindingContext as Car).Id
+            };
+
+            try
+            {
+                int saved = await TicketHelper.SaveItemAsync(ticket);
+                await DisplayAlert("Guardar", "Multa registrada correctamente", "Ok");
+                await Navigation.PopAsync();
+            }
+            catch (Exception)
+            {
+                await DisplayAlert("Guardar", "La Multa NO se pudo registrar", "Ok");
+                return;
+            }
         }
     }
 }
