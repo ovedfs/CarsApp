@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarsApp.TaxesPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+ Tenencia" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="{Binding Placas}"/>
+
+            <ListView x:Name="TaxesListView" ItemSelected="TaxessListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Year}" Detail="{Binding Monto}" ImageSource="{Binding Archivo}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

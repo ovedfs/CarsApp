@@ -13,9 +13,7 @@
 
     <Local:TicketsPage Icon="tickets.png"/>
 
-    <ContentPage Icon="taxes.png">
-        <Label Text="Estas en la página de Tenencias..."/>
-    </ContentPage>
+    <Local:TaxesPage Icon="taxes.png"/>
 
     <ContentPage Icon="verify.png">
         <Label Text="Estas en la página de Verificaciones..."/>
